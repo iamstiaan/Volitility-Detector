@@ -30,7 +30,7 @@ func TestPetNewWithOptionalParams(t *testing.T) {
 	_, err := client.Pets.New(context.TODO(), whatsauto.PetNewParams{
 		Pet: whatsauto.PetParam{
 			Name:      whatsauto.F("doggie"),
-			PhotoURLs: whatsauto.F([]string{"string", "string", "string"}),
+			PhotoURLs: whatsauto.F([]string{"string"}),
 			ID:        whatsauto.F(int64(10)),
 			Category: whatsauto.F(whatsauto.PetCategoryParam{
 				ID:   whatsauto.F(int64(1)),
@@ -38,12 +38,6 @@ func TestPetNewWithOptionalParams(t *testing.T) {
 			}),
 			Status: whatsauto.F(whatsauto.PetStatusAvailable),
 			Tags: whatsauto.F([]whatsauto.PetTagParam{{
-				ID:   whatsauto.F(int64(0)),
-				Name: whatsauto.F("name"),
-			}, {
-				ID:   whatsauto.F(int64(0)),
-				Name: whatsauto.F("name"),
-			}, {
 				ID:   whatsauto.F(int64(0)),
 				Name: whatsauto.F("name"),
 			}}),
@@ -95,7 +89,7 @@ func TestPetUpdateWithOptionalParams(t *testing.T) {
 	_, err := client.Pets.Update(context.TODO(), whatsauto.PetUpdateParams{
 		Pet: whatsauto.PetParam{
 			Name:      whatsauto.F("doggie"),
-			PhotoURLs: whatsauto.F([]string{"string", "string", "string"}),
+			PhotoURLs: whatsauto.F([]string{"string"}),
 			ID:        whatsauto.F(int64(10)),
 			Category: whatsauto.F(whatsauto.PetCategoryParam{
 				ID:   whatsauto.F(int64(1)),
@@ -103,12 +97,6 @@ func TestPetUpdateWithOptionalParams(t *testing.T) {
 			}),
 			Status: whatsauto.F(whatsauto.PetStatusAvailable),
 			Tags: whatsauto.F([]whatsauto.PetTagParam{{
-				ID:   whatsauto.F(int64(0)),
-				Name: whatsauto.F("name"),
-			}, {
-				ID:   whatsauto.F(int64(0)),
-				Name: whatsauto.F("name"),
-			}, {
 				ID:   whatsauto.F(int64(0)),
 				Name: whatsauto.F("name"),
 			}}),
@@ -182,7 +170,7 @@ func TestPetFindByTagsWithOptionalParams(t *testing.T) {
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Pets.FindByTags(context.TODO(), whatsauto.PetFindByTagsParams{
-		Tags: whatsauto.F([]string{"string", "string", "string"}),
+		Tags: whatsauto.F([]string{"string"}),
 	})
 	if err != nil {
 		var apierr *whatsauto.Error

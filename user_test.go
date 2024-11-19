@@ -149,24 +149,6 @@ func TestUserNewWithList(t *testing.T) {
 			Phone:      whatsauto.F("12345"),
 			Username:   whatsauto.F("theUser"),
 			UserStatus: whatsauto.F(int64(1)),
-		}, {
-			ID:         whatsauto.F(int64(10)),
-			Email:      whatsauto.F("john@email.com"),
-			FirstName:  whatsauto.F("John"),
-			LastName:   whatsauto.F("James"),
-			Password:   whatsauto.F("12345"),
-			Phone:      whatsauto.F("12345"),
-			Username:   whatsauto.F("theUser"),
-			UserStatus: whatsauto.F(int64(1)),
-		}, {
-			ID:         whatsauto.F(int64(10)),
-			Email:      whatsauto.F("john@email.com"),
-			FirstName:  whatsauto.F("John"),
-			LastName:   whatsauto.F("James"),
-			Password:   whatsauto.F("12345"),
-			Phone:      whatsauto.F("12345"),
-			Username:   whatsauto.F("theUser"),
-			UserStatus: whatsauto.F(int64(1)),
 		}},
 	})
 	if err != nil {
