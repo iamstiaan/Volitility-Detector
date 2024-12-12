@@ -36,11 +36,10 @@ func NewUserService(opts ...option.RequestOption) (r *UserService) {
 }
 
 // This can only be done by the logged in user.
-func (r *UserService) New(ctx context.Context, body UserNewParams, opts ...option.RequestOption) (err error) {
+func (r *UserService) New(ctx context.Context, body UserNewParams, opts ...option.RequestOption) (res *User, err error) {
 	opts = append(r.Options[:], opts...)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
 	path := "user"
-	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPost, path, body, nil, opts...)
+	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPost, path, body, &res, opts...)
 	return
 }
 

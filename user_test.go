@@ -25,7 +25,7 @@ func TestUserNewWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	err := client.User.New(context.TODO(), whatsauto.UserNewParams{
+	_, err := client.User.New(context.TODO(), whatsauto.UserNewParams{
 		User: whatsauto.UserParam{
 			ID:         whatsauto.F(int64(10)),
 			Email:      whatsauto.F("john@email.com"),
