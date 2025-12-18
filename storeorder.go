@@ -6,6 +6,7 @@ import (
 	"context"
 	"fmt"
 	"net/http"
+	"slices"
 
 	"github.com/stainless-sdks/whatsauto-go/internal/requestconfig"
 	"github.com/stainless-sdks/whatsauto-go/option"
@@ -34,7 +35,7 @@ func NewStoreOrderService(opts ...option.RequestOption) (r *StoreOrderService) {
 // For valid response try integer IDs with value <= 5 or > 10. Other values will
 // generate exceptions.
 func (r *StoreOrderService) Get(ctx context.Context, orderID int64, opts ...option.RequestOption) (res *shared.Order, err error) {
-	opts = append(r.Options[:], opts...)
+	opts = slices.Concat(r.Options, opts)
 	path := fmt.Sprintf("store/order/%v", orderID)
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodGet, path, nil, &res, opts...)
 	return
@@ -43,8 +44,8 @@ func (r *StoreOrderService) Get(ctx context.Context, orderID int64, opts ...opti
 // For valid response try integer IDs with value < 1000. Anything above 1000 or
 // nonintegers will generate API errors
 func (r *StoreOrderService) DeleteOrder(ctx context.Context, orderID int64, opts ...option.RequestOption) (err error) {
-	opts = append(r.Options[:], opts...)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = slices.Concat(r.Options, opts)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := fmt.Sprintf("store/order/%v", orderID)
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodDelete, path, nil, nil, opts...)
 	return

@@ -5,6 +5,7 @@ package whatsauto
 import (
 	"context"
 	"net/http"
+	"slices"
 
 	"github.com/stainless-sdks/whatsauto-go/internal/apijson"
 	"github.com/stainless-sdks/whatsauto-go/internal/requestconfig"
@@ -35,7 +36,7 @@ func NewStoreService(opts ...option.RequestOption) (r *StoreService) {
 
 // Place a new order in the store
 func (r *StoreService) NewOrder(ctx context.Context, body StoreNewOrderParams, opts ...option.RequestOption) (res *shared.Order, err error) {
-	opts = append(r.Options[:], opts...)
+	opts = slices.Concat(r.Options, opts)
 	path := "store/order"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPost, path, body, &res, opts...)
 	return
@@ -43,7 +44,7 @@ func (r *StoreService) NewOrder(ctx context.Context, body StoreNewOrderParams, o
 
 // Returns a map of status codes to quantities
 func (r *StoreService) Inventory(ctx context.Context, opts ...option.RequestOption) (res *StoreInventoryResponse, err error) {
-	opts = append(r.Options[:], opts...)
+	opts = slices.Concat(r.Options, opts)
 	path := "store/inventory"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodGet, path, nil, &res, opts...)
 	return
@@ -52,7 +53,7 @@ func (r *StoreService) Inventory(ctx context.Context, opts ...option.RequestOpti
 type StoreInventoryResponse map[string]int64
 
 type StoreNewOrderParams struct {
-	Order shared.OrderParam `json:"order,required"`
+	Order shared.OrderParam `json:"order"`
 }
 
 func (r StoreNewOrderParams) MarshalJSON() (data []byte, err error) {

@@ -10,7 +10,6 @@ import (
 	"github.com/stainless-sdks/whatsauto-go"
 	"github.com/stainless-sdks/whatsauto-go/internal/testutil"
 	"github.com/stainless-sdks/whatsauto-go/option"
-	"github.com/stainless-sdks/whatsauto-go/shared"
 )
 
 func TestUsage(t *testing.T) {
@@ -25,11 +24,10 @@ func TestUsage(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	order, err := client.Store.NewOrder(context.TODO(), whatsauto.StoreNewOrderParams{
-		Order: shared.OrderParam{},
-	})
+	order, err := client.Store.NewOrder(context.TODO(), whatsauto.StoreNewOrderParams{})
 	if err != nil {
 		t.Error(err)
+		return
 	}
 	t.Logf("%+v\n", order.ID)
 }
