@@ -10,11 +10,13 @@
 
 Params Types:
 
+- <a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector">whatsauto</a>.<a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector#CategoryParam">CategoryParam</a>
 - <a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector">whatsauto</a>.<a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector#PetParam">PetParam</a>
 
 Response Types:
 
 - <a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector">whatsauto</a>.<a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector#APIResponse">APIResponse</a>
+- <a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector">whatsauto</a>.<a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector#Category">Category</a>
 - <a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector">whatsauto</a>.<a href="https://pkg.go.dev/github.com/iamstiaan/Volitility-Detector#Pet">Pet</a>
 
 Methods:

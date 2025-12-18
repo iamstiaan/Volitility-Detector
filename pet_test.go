@@ -32,7 +32,7 @@ func TestPetNewWithOptionalParams(t *testing.T) {
 			Name:      whatsauto.F("doggie"),
 			PhotoURLs: whatsauto.F([]string{"string"}),
 			ID:        whatsauto.F(int64(10)),
-			Category: whatsauto.F(whatsauto.PetCategoryParam{
+			Category: whatsauto.F(whatsauto.CategoryParam{
 				ID:   whatsauto.F(int64(1)),
 				Name: whatsauto.F("Dogs"),
 			}),
@@ -91,7 +91,7 @@ func TestPetUpdateWithOptionalParams(t *testing.T) {
 			Name:      whatsauto.F("doggie"),
 			PhotoURLs: whatsauto.F([]string{"string"}),
 			ID:        whatsauto.F(int64(10)),
-			Category: whatsauto.F(whatsauto.PetCategoryParam{
+			Category: whatsauto.F(whatsauto.CategoryParam{
 				ID:   whatsauto.F(int64(1)),
 				Name: whatsauto.F("Dogs"),
 			}),
