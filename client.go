@@ -8,8 +8,8 @@ import (
 	"os"
 	"slices"
 
-	"github.com/stainless-sdks/whatsauto-go/internal/requestconfig"
-	"github.com/stainless-sdks/whatsauto-go/option"
+	"github.com/iamstiaan/Volitility-Detector/internal/requestconfig"
+	"github.com/iamstiaan/Volitility-Detector/option"
 )
 
 // Client creates a struct with services and top level methods that help with

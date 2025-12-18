@@ -13,7 +13,7 @@ import (
 
 	"github.com/tidwall/sjson"
 
-	"github.com/stainless-sdks/whatsauto-go/internal/param"
+	"github.com/iamstiaan/Volitility-Detector/internal/param"
 )
 
 var encoders sync.Map // map[encoderEntry]encoderFunc

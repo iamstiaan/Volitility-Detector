@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"slices"
 
-	"github.com/stainless-sdks/whatsauto-go/internal/apijson"
-	"github.com/stainless-sdks/whatsauto-go/internal/requestconfig"
-	"github.com/stainless-sdks/whatsauto-go/option"
-	"github.com/stainless-sdks/whatsauto-go/shared"
+	"github.com/iamstiaan/Volitility-Detector/internal/apijson"
+	"github.com/iamstiaan/Volitility-Detector/internal/requestconfig"
+	"github.com/iamstiaan/Volitility-Detector/option"
+	"github.com/iamstiaan/Volitility-Detector/shared"
 )
 
 // StoreService contains methods and other services that help with interacting with
