@@ -169,7 +169,7 @@ type Pet struct {
 	Category  Category `json:"category"`
 	// pet status in the store
 	Status PetStatus `json:"status"`
-	Tags   []PetTag  `json:"tags"`
+	Tags   []Tag     `json:"tags"`
 	JSON   petJSON   `json:"-"`
 }
 
@@ -210,48 +210,48 @@ func (r PetStatus) IsKnown() bool {
 	return false
 }
 
-type PetTag struct {
-	ID   int64      `json:"id"`
-	Name string     `json:"name"`
-	JSON petTagJSON `json:"-"`
-}
-
-// petTagJSON contains the JSON metadata for the struct [PetTag]
-type petTagJSON struct {
-	ID          apijson.Field
-	Name        apijson.Field
-	raw         string
-	ExtraFields map[string]apijson.Field
-}
-
-func (r *PetTag) UnmarshalJSON(data []byte) (err error) {
-	return apijson.UnmarshalRoot(data, r)
-}
-
-func (r petTagJSON) RawJSON() string {
-	return r.raw
-}
-
 type PetParam struct {
 	Name      param.Field[string]        `json:"name,required"`
 	PhotoURLs param.Field[[]string]      `json:"photoUrls,required"`
 	ID        param.Field[int64]         `json:"id"`
 	Category  param.Field[CategoryParam] `json:"category"`
 	// pet status in the store
-	Status param.Field[PetStatus]     `json:"status"`
-	Tags   param.Field[[]PetTagParam] `json:"tags"`
+	Status param.Field[PetStatus]  `json:"status"`
+	Tags   param.Field[[]TagParam] `json:"tags"`
 }
 
 func (r PetParam) MarshalJSON() (data []byte, err error) {
 	return apijson.MarshalRoot(r)
 }
 
-type PetTagParam struct {
+type Tag struct {
+	ID   int64   `json:"id"`
+	Name string  `json:"name"`
+	JSON tagJSON `json:"-"`
+}
+
+// tagJSON contains the JSON metadata for the struct [Tag]
+type tagJSON struct {
+	ID          apijson.Field
+	Name        apijson.Field
+	raw         string
+	ExtraFields map[string]apijson.Field
+}
+
+func (r *Tag) UnmarshalJSON(data []byte) (err error) {
+	return apijson.UnmarshalRoot(data, r)
+}
+
+func (r tagJSON) RawJSON() string {
+	return r.raw
+}
+
+type TagParam struct {
 	ID   param.Field[int64]  `json:"id"`
 	Name param.Field[string] `json:"name"`
 }
 
-func (r PetTagParam) MarshalJSON() (data []byte, err error) {
+func (r TagParam) MarshalJSON() (data []byte, err error) {
 	return apijson.MarshalRoot(r)
 }
 

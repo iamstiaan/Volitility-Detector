@@ -37,7 +37,7 @@ func TestPetNewWithOptionalParams(t *testing.T) {
 				Name: whatsauto.F("Dogs"),
 			}),
 			Status: whatsauto.F(whatsauto.PetStatusAvailable),
-			Tags: whatsauto.F([]whatsauto.PetTagParam{{
+			Tags: whatsauto.F([]whatsauto.TagParam{{
 				ID:   whatsauto.F(int64(0)),
 				Name: whatsauto.F("name"),
 			}}),
@@ -96,7 +96,7 @@ func TestPetUpdateWithOptionalParams(t *testing.T) {
 				Name: whatsauto.F("Dogs"),
 			}),
 			Status: whatsauto.F(whatsauto.PetStatusAvailable),
-			Tags: whatsauto.F([]whatsauto.PetTagParam{{
+			Tags: whatsauto.F([]whatsauto.TagParam{{
 				ID:   whatsauto.F(int64(0)),
 				Name: whatsauto.F("name"),
 			}}),
