@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/whatsauto-go"
-	"github.com/stainless-sdks/whatsauto-go/internal/testutil"
-	"github.com/stainless-sdks/whatsauto-go/option"
-	"github.com/stainless-sdks/whatsauto-go/shared"
+	"github.com/iamstiaan/Volitility-Detector"
+	"github.com/iamstiaan/Volitility-Detector/internal/testutil"
+	"github.com/iamstiaan/Volitility-Detector/option"
+	"github.com/iamstiaan/Volitility-Detector/shared"
 )
 
 func TestStoreNewOrderWithOptionalParams(t *testing.T) {

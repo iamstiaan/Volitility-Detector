@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/whatsauto-go/internal/param"
+	"github.com/iamstiaan/Volitility-Detector/internal/param"
 )
 
 type Struct struct {

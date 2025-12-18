@@ -5,8 +5,8 @@ package shared
 import (
 	"time"
 
-	"github.com/stainless-sdks/whatsauto-go/internal/apijson"
-	"github.com/stainless-sdks/whatsauto-go/internal/param"
+	"github.com/iamstiaan/Volitility-Detector/internal/apijson"
+	"github.com/iamstiaan/Volitility-Detector/internal/param"
 )
 
 type Order struct {
