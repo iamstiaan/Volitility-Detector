@@ -225,8 +225,8 @@ func TestPetUploadImageWithOptionalParams(t *testing.T) {
 	_, err := client.Pets.UploadImage(
 		context.TODO(),
 		int64(0),
+		io.Reader(bytes.NewBuffer([]byte("some file contents"))),
 		whatsauto.PetUploadImageParams{
-			Image:              io.Reader(bytes.NewBuffer([]byte("some file contents"))),
 			AdditionalMetadata: whatsauto.F("additionalMetadata"),
 		},
 	)
