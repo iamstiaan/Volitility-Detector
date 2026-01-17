@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/whatsauto-go"
-	"github.com/stainless-sdks/whatsauto-go/internal"
-	"github.com/stainless-sdks/whatsauto-go/option"
+	"github.com/iamstiaan/Volitility-Detector"
+	"github.com/iamstiaan/Volitility-Detector/internal"
+	"github.com/iamstiaan/Volitility-Detector/option"
 )
 
 type closureTransport struct {

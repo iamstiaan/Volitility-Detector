@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/whatsauto-go"
-	"github.com/stainless-sdks/whatsauto-go/internal/testutil"
-	"github.com/stainless-sdks/whatsauto-go/option"
+	"github.com/iamstiaan/Volitility-Detector"
+	"github.com/iamstiaan/Volitility-Detector/internal/testutil"
+	"github.com/iamstiaan/Volitility-Detector/option"
 )
 
 func TestUsage(t *testing.T) {

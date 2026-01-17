@@ -18,11 +18,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stainless-sdks/whatsauto-go/internal"
-	"github.com/stainless-sdks/whatsauto-go/internal/apierror"
-	"github.com/stainless-sdks/whatsauto-go/internal/apiform"
-	"github.com/stainless-sdks/whatsauto-go/internal/apiquery"
-	"github.com/stainless-sdks/whatsauto-go/internal/param"
+	"github.com/iamstiaan/Volitility-Detector/internal"
+	"github.com/iamstiaan/Volitility-Detector/internal/apierror"
+	"github.com/iamstiaan/Volitility-Detector/internal/apiform"
+	"github.com/iamstiaan/Volitility-Detector/internal/apiquery"
+	"github.com/iamstiaan/Volitility-Detector/internal/param"
 )
 
 func getDefaultHeaders() map[string]string {

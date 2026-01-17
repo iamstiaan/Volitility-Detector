@@ -10,9 +10,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/whatsauto-go"
-	"github.com/stainless-sdks/whatsauto-go/internal/testutil"
-	"github.com/stainless-sdks/whatsauto-go/option"
+	"github.com/iamstiaan/Volitility-Detector"
+	"github.com/iamstiaan/Volitility-Detector/internal/testutil"
+	"github.com/iamstiaan/Volitility-Detector/option"
 )
 
 func TestPetNewWithOptionalParams(t *testing.T) {
@@ -32,12 +32,12 @@ func TestPetNewWithOptionalParams(t *testing.T) {
 			Name:      whatsauto.F("doggie"),
 			PhotoURLs: whatsauto.F([]string{"string"}),
 			ID:        whatsauto.F(int64(10)),
-			Category: whatsauto.F(whatsauto.PetCategoryParam{
+			Category: whatsauto.F(whatsauto.CategoryParam{
 				ID:   whatsauto.F(int64(1)),
 				Name: whatsauto.F("Dogs"),
 			}),
 			Status: whatsauto.F(whatsauto.PetStatusAvailable),
-			Tags: whatsauto.F([]whatsauto.PetTagParam{{
+			Tags: whatsauto.F([]whatsauto.TagParam{{
 				ID:   whatsauto.F(int64(0)),
 				Name: whatsauto.F("name"),
 			}}),
@@ -91,12 +91,12 @@ func TestPetUpdateWithOptionalParams(t *testing.T) {
 			Name:      whatsauto.F("doggie"),
 			PhotoURLs: whatsauto.F([]string{"string"}),
 			ID:        whatsauto.F(int64(10)),
-			Category: whatsauto.F(whatsauto.PetCategoryParam{
+			Category: whatsauto.F(whatsauto.CategoryParam{
 				ID:   whatsauto.F(int64(1)),
 				Name: whatsauto.F("Dogs"),
 			}),
 			Status: whatsauto.F(whatsauto.PetStatusAvailable),
-			Tags: whatsauto.F([]whatsauto.PetTagParam{{
+			Tags: whatsauto.F([]whatsauto.TagParam{{
 				ID:   whatsauto.F(int64(0)),
 				Name: whatsauto.F("name"),
 			}}),

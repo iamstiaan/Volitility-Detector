@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/whatsauto-go
+module github.com/iamstiaan/Volitility-Detector
 
 go 1.22
 

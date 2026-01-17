@@ -3,8 +3,8 @@
 package whatsauto
 
 import (
-	"github.com/stainless-sdks/whatsauto-go/internal/apierror"
-	"github.com/stainless-sdks/whatsauto-go/shared"
+	"github.com/iamstiaan/Volitility-Detector/internal/apierror"
+	"github.com/iamstiaan/Volitility-Detector/shared"
 )
 
 type Error = apierror.Error
